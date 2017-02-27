@@ -1,0 +1,3 @@
+[submodule "node_modules/react-native-pin-input"]
+	path = node_modules/react-native-pin-input
+	url = git@github.com:lotosbin/react-native-pin-input.git
