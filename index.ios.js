@@ -6,16 +6,36 @@
 
 import React, { Component } from 'react';
 import {
+    Alert,
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import PinInput from 'react-native-pin-input';
+
+
 
 export default class sample extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pin: ''
+        }
+    }
   render() {
     return (
       <View style={styles.container}>
+          <PinInput
+              pinLength={6}
+              pinItemStyle={{width: 50, height: 50}}
+              onPinCompleted={(pin) => {
+                  this.setState({pin: pin})
+              }}
+          />
+          <Text>
+              Pin:{this.state.pin}
+          </Text>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -27,6 +47,7 @@ export default class sample extends Component {
           Cmd+D or shake for dev menu
         </Text>
       </View>
+
     );
   }
 }
