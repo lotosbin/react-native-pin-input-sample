@@ -2,6 +2,15 @@
 
 A sample for [react-native-pin-input](https://github.com/lotosbin/react-native-pin-input)
 
+# Installation
+```
+npm install --save react-native-pin-input
+```
+or
+```
+yarn add react-native-pin-input
+```
+
 # Sample
 
 set keyboardType
