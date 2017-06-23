@@ -29,6 +29,7 @@ export default class sample extends Component {
           <PinInput
               pinLength={6}
               pinItemStyle={{width: 50, height: 50}}
+              pinItemProps={{keyboardType:'number-pad'}}
               onPinCompleted={(pin) => {
                   this.setState({pin: pin})
               }}

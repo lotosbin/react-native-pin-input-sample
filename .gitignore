@@ -24,10 +24,7 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
-build/
 .idea
-.gradle
-local.properties
 *.iml
 
 # node.js
@@ -53,3 +50,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 react-native-pin-input/
+/.idea/
+/.vscode/
+/gen/
