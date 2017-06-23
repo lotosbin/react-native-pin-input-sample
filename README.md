@@ -1,5 +1,6 @@
 # react-native-pin-input-sample
 
+A sample for [react-native-pin-input](https://github.com/lotosbin/react-native-pin-input-sample)
 
 # Sample
 
