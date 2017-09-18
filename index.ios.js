@@ -29,8 +29,10 @@ export default class sample extends Component {
     return (
       <View style={styles.container}>
           <PinInput
-              ref={"pin"}
+              ref={pin => this.pin = pin}
+              autoFocus={false}
               pinLength={6}
+              value={'654321'}
               pinItemStyle={{width: 50, height: 50}}
               pinItemProps={{keyboardType:'number-pad'}}
               onPinCompleted={(pin) => {
@@ -40,16 +42,20 @@ export default class sample extends Component {
           <Text>
               Pin:{this.state.pin}
           </Text>
-          <TouchableOpacity onPress={() => this.refs.pin.setPin('123456')}>
+          <TouchableOpacity onPress={() => this.pin.setPin('123456')}>
               <Text>Set Pin</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.setState({getPin: this.refs.pin.getPin()})}>
+          <TouchableOpacity onPress={() => this.setState({getPin: this.pin.getPin()})}>
               <Text>get Pin</Text>
           </TouchableOpacity>
           <Text>get pin:{this.state.getPin}</Text>
-          <TouchableOpacity onPress={() => this.refs.pin.clearPin()}>
+          <TouchableOpacity onPress={() => this.pin.clearPin()}>
               <Text>clear Pin</Text>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => this.pin.focusPin(0)}>
+              <Text>Focus Pin</Text>
+          </TouchableOpacity>
+
           <Text style={styles.welcome}>
               Welcome to React Native!
           </Text>

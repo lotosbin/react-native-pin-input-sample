@@ -18,6 +18,8 @@ set keyboardType
         <PinInput
               ref={"pin"}
               pinLength={6}
+              value={'654321'}
+              autoFocus={false}
               pinItemStyle={{width: 50, height: 50}}
               pinItemProps={{keyboardType:'number-pad'}}
               onPinCompleted={(pin) => {
@@ -38,4 +40,8 @@ const pin = this.refs.pin.getPin()
 - clearPin
 ```javascript
 this.refs.pin.clearPin()
+```
+- focusPin(i)
+```javascript
+this.refs.pin.focusPin(0)
 ```
