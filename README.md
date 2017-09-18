@@ -16,6 +16,7 @@ yarn add react-native-pin-input
 set keyboardType
 ```jsx harmony
         <PinInput
+              ref={"pin"}
               pinLength={6}
               pinItemStyle={{width: 50, height: 50}}
               pinItemProps={{keyboardType:'number-pad'}}
@@ -23,4 +24,18 @@ set keyboardType
                   this.setState({pin: pin})
               }}
           />
+```
+## method
+- setPin
+
+```javascript
+this.refs.pin.setPin('123456')
+```
+- getPin
+```javascript
+const pin = this.refs.pin.getPin()
+```
+- clearPin
+```javascript
+this.refs.pin.clearPin()
 ```

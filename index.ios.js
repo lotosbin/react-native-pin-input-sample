@@ -9,6 +9,7 @@ import {
     Alert,
   AppRegistry,
   StyleSheet,
+    TouchableOpacity,
   Text,
   View
 } from 'react-native';
@@ -20,13 +21,15 @@ export default class sample extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pin: ''
+            pin: '',
+            getPin: ''
         }
     }
   render() {
     return (
       <View style={styles.container}>
           <PinInput
+              ref={"pin"}
               pinLength={6}
               pinItemStyle={{width: 50, height: 50}}
               pinItemProps={{keyboardType:'number-pad'}}
@@ -37,16 +40,26 @@ export default class sample extends Component {
           <Text>
               Pin:{this.state.pin}
           </Text>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+          <TouchableOpacity onPress={() => this.refs.pin.setPin('123456')}>
+              <Text>Set Pin</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => this.setState({getPin: this.refs.pin.getPin()})}>
+              <Text>get Pin</Text>
+          </TouchableOpacity>
+          <Text>get pin:{this.state.getPin}</Text>
+          <TouchableOpacity onPress={() => this.refs.pin.clearPin()}>
+              <Text>clear Pin</Text>
+          </TouchableOpacity>
+          <Text style={styles.welcome}>
+              Welcome to React Native!
+          </Text>
+          <Text style={styles.instructions}>
+              To get started, edit index.ios.js
+          </Text>
+          <Text style={styles.instructions}>
+              Press Cmd+R to reload,{'\n'}
+              Cmd+D or shake for dev menu
+          </Text>
       </View>
 
     );
