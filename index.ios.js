@@ -34,7 +34,7 @@ export default class sample extends Component {
               pinLength={6}
               value={'654321'}
               pinItemStyle={{width: 50, height: 50}}
-              pinItemProps={{keyboardType:'number-pad'}}
+              pinItemProps={{keyboardType: 'number-pad', returnKeyType: 'done', secureTextEntry: true}}
               onPinCompleted={(pin) => {
                   this.setState({pin: pin})
               }}
