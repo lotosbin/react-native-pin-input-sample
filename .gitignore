@@ -53,3 +53,4 @@ react-native-pin-input/
 /.idea/
 /.vscode/
 /gen/
+/flow-typed/

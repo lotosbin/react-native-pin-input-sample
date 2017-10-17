@@ -32,7 +32,7 @@ export default class sample extends Component {
               ref={pin => this.pin = pin}
               autoFocus={false}
               pinLength={6}
-              value={'654321'}
+              // value={'654321'}
               pinItemStyle={{width: 50, height: 50}}
               pinItemProps={{keyboardType: 'number-pad', returnKeyType: 'done', secureTextEntry: true}}
               onPinCompleted={(pin) => {
