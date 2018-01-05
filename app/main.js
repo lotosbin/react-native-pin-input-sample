@@ -14,7 +14,8 @@ export class sample extends Component {
         super(props);
         this.state = {
             pin: '',
-            getPin: ''
+            getPin: '',
+            log: "",
         }
     }
 
@@ -46,6 +47,11 @@ export class sample extends Component {
                         this.setState({pin: pin});
                         Keyboard.dismiss();
                     }}
+                    onPinKeyPress={(e, i) => {
+                        let message = `i:${i},key:${e.nativeEvent.key}`;
+                        console.log(message)
+                        this.setState({log: this.state.log + message})
+                    }}
                     containerStyle={{backgroundColor: 'transparent'}}
                     containerPinStyle={{
                         flexDirection: 'row',
@@ -70,7 +76,7 @@ export class sample extends Component {
                 <TouchableOpacity onPress={() => this.pin.focusPin(0)}>
                     <Text>Focus Pin</Text>
                 </TouchableOpacity>
-
+                <Text>{this.state.log}</Text>
                 <Text style={styles.welcome}>
                     Welcome to React Native!
                 </Text>
