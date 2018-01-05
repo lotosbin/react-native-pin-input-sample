@@ -1,3 +1,4 @@
 [submodule "react-native-pin-input"]
 	path = react-native-pin-input
 	url = git@github.com:lotosbin/react-native-pin-input.git
+	branch = master
