@@ -3,10 +3,10 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
-    "ios": "react-native run-ios",
-    "android": "react-native run-android",
-    "upgrade": "yarn upgrade file:./react-native-pin-input",
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start:android": "react-native run-android",
+    "start:ios": "react-native run-ios",
+    "upgrade": "yarn upgrade file:./react-native-pin-input"
   },
   "dependencies": {
     "react": "^15.4.2",
