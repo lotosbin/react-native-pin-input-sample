@@ -35,6 +35,7 @@ export class sample extends Component {
                 {/*}}*/}
                 {/*/>*/}
                 <PinInput
+                    style={{justifyContent: 'space-between', alignSelf: 'stretch'}}
                     ref={(input) => {
                         this.pin = input;
                     }}
